@@ -1,0 +1,31 @@
+/* src/App.css */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc; /* Clean modern slate background */
+}
+
+.portfolio-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 40px 40px 40px; /* Top padding clears the fixed navbar */
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+/* 🌟 THE GRID ENGINE: Auto-calculates columns based on screen space */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding-top: 12px;
+}

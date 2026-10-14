@@ -1,0 +1,139 @@
+/* src/components/styles/ProjectCard.css */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* 🌟 REACTIVE HOVER INTERACTION */
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #007bff;
+  box-shadow: 0 12px 20px -5px rgba(0, 123, 255, 0.15);
+}
+
+/* Starred card highlighted background */
+.project-card.starred {
+  border-color: #f59e0b;
+  background: #fefaf0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.folder-icon {
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  color: #f59e0b;
+  transition: transform 0.2s;
+}
+
+.star-button:hover {
+  transform: scale(1.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* Individual language pills */
+.tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.link-icon {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.link-icon:hover {
+  color: #111;
+}
+
+.link-btn {
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.link-btn:hover {
+  background: #0056b3;
+}
+
+/* 🌟 THE GRID ENGINE: Auto-calculates columns based on screen space */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding-top: 12px;
+}
+
+/* Search and Filter Styles */
+
+.tag-pill { border: none; cursor: pointer; }
+.tag-pill.active { background: #4338ca; color: #fff; }
+.search-input { width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #e5e7eb; margin-bottom: 12px; }
+.filter-bar { margin-bottom: 16px; }
+.result-count {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: left;
+  margin: 0 0 12px;
+}
